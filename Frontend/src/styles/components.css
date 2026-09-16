@@ -1,0 +1,258 @@
+/* ─── KPICard ─────────────────────────────────────────────────────────────── */
+
+.kpi-card {
+  background: var(--surface-1);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--pad-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kpi-card__label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.kpi-card__value {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.kpi-card__change {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.kpi-card__change--up   { color: var(--success); }
+.kpi-card__change--down { color: var(--danger); }
+
+/* ─── StatusBadge ─────────────────────────────────────────────────────────── */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-badge--ok       { background: var(--success-bg); color: var(--success); }
+.status-badge--warning  { background: var(--warning-bg); color: var(--warning); }
+.status-badge--critical { background: var(--danger-bg);  color: var(--danger);  }
+
+/* ─── ActionButton ─────────────────────────────────────────────────────────── */
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.action-btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.action-btn--primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.action-btn--ghost {
+  background: var(--surface-2);
+  color: var(--text-primary);
+  border: var(--border);
+}
+
+.action-btn--ghost:hover:not(:disabled) {
+  background: #3a3a3a;
+}
+
+.action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── AlertBox ─────────────────────────────────────────────────────────────── */
+
+.alert-box {
+  background: var(--danger-bg);
+  border: 0.5px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--radius);
+  padding: var(--pad-md) var(--pad-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.alert-box__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.alert-box__icon {
+  font-size: 15px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.alert-box__mensaje {
+  font-size: 13px;
+  color: #fca5a5;
+  line-height: 1.5;
+}
+
+.alert-box__producto {
+  font-size: 11px;
+  color: var(--danger);
+  margin-top: 1px;
+}
+
+/* ─── Spinner ─────────────────────────────────────────────────────────────── */
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--surface-2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Tabla ───────────────────────────────────────────────────────────────── */
+
+.tabla {
+  background: var(--surface-1);
+  border: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tabla th {
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: var(--pad-md) var(--pad-lg);
+  text-align: left;
+  border-bottom: var(--border);
+}
+
+.tabla td {
+  padding: var(--pad-md) var(--pad-lg);
+  border-bottom: var(--border);
+  color: var(--text-primary);
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla tr:hover td {
+  background: var(--surface-2);
+}
+
+/* ─── Chat ────────────────────────────────────────────────────────────────── */
+
+.chat {
+  background: var(--surface-1);
+  border: var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+}
+
+.chat__header {
+  padding: var(--pad-md) var(--pad-lg);
+  border-bottom: var(--border);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.chat__mensajes {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--pad-md);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat__burbuja {
+  max-width: 80%;
+  padding: var(--pad-sm) var(--pad-md);
+  border-radius: var(--radius);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.chat__burbuja--usuario {
+  align-self: flex-end;
+  background: var(--accent);
+  color: #fff;
+}
+
+.chat__burbuja--agente {
+  align-self: flex-start;
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+
+.chat__footer {
+  padding: var(--pad-md);
+  border-top: var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-sm);
+}
+
+.chat__select,
+.chat__input {
+  background: var(--surface-2);
+  border: var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  padding: var(--pad-sm) var(--pad-md);
+  font-size: 13px;
+  width: 100%;
+}
+
+.chat__select:focus,
+.chat__input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.chat__enviar-row {
+  display: flex;
+  gap: var(--pad-sm);
+}
+
+.chat__input {
+  flex: 1;
+}
+
