@@ -32,3 +32,7 @@
 /home/ivan/Projects/Stockcito/Backend/API/obj/Debug/net10.0/API.pdb
 /home/ivan/Projects/Stockcito/Backend/API/obj/Debug/net10.0/API.genruntimeconfig.cache
 /home/ivan/Projects/Stockcito/Backend/API/obj/Debug/net10.0/ref/API.dll
+/home/ivan/Projects/Stockcito/Backend/API/bin/Debug/net10.0/Application.dll
+/home/ivan/Projects/Stockcito/Backend/API/bin/Debug/net10.0/Domain.dll
+/home/ivan/Projects/Stockcito/Backend/API/bin/Debug/net10.0/Application.pdb
+/home/ivan/Projects/Stockcito/Backend/API/bin/Debug/net10.0/Domain.pdb
