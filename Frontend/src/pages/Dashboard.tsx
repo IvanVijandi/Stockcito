@@ -1,7 +1,5 @@
 import { useDashboard } from '../hooks/useDashboard';
 import { Spinner } from '../components/common/Spinner';
-import { SeccionAlertas } from '../components/dashboard/SeccionAlertas';
-import { SeccionKPIs } from '../components/dashboard/SeccionKPIs';
 import { TablaProductos } from '../components/dashboard/TablaProductos/TablaProductos';
 import { GraficoPronostico } from '../components/dashboard/GraficoPronostico';
 import { ChatAgente } from '../components/dashboard/ChatAgente/ChatAgente';
@@ -32,10 +30,8 @@ export function Dashboard() {
 
   return (
     <div>
-      <SeccionAlertas alertas={datos.alertas} />
-      <SeccionKPIs datos={datos} />
       <TablaProductos productos={datos.productos} onPedir={handlePedir} />
-      <GraficoPronostico datos={datos.forecast} />
+      <GraficoPronostico datos={datos.forecast} productos={datos.productos} />
       <ChatAgente productos={datos.productos} />
     </div>
   );
