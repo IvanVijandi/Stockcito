@@ -7,16 +7,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-<<<<<<< HEAD
-// Registro de Casos de Uso
-builder.Services.AddScoped<Application.UseCases.Productos.IAgregarProductoUseCase, Application.UseCases.Productos.AgregarProductoUseCase>();
-builder.Services.AddScoped<Application.UseCases.Stock.IAgregarStockUseCase, Application.UseCases.Stock.AgregarStockUseCase>();
-builder.Services.AddScoped<Application.UseCases.Stock.IConsultarStockUseCase, Application.UseCases.Stock.ConsultarStockUseCase>();
-=======
+// Configuración de Repositorios (Infrastructure)
+builder.Services.AddScoped<Application.Ports.Repositories.IRepositorioProducto, Infrastructure.Repositories.RepositorioProducto>();
+builder.Services.AddScoped<Application.Ports.Repositories.IRepositorioMovimientoStock, Infrastructure.Repositories.RepositorioMovimientoStock>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 // Configuración de Entity Framework Core con PostgreSQL
 builder.Services.AddDbContext<StockcitoDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
->>>>>>> origin/BaseDeDatos
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -30,6 +35,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 

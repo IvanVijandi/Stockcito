@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kxtcaaV3lZw=",
+  "dgSpecHash": "jdScph3Nzmk=",
   "success": true,
   "projectFilePath": "/home/ivan/Projects/Stockcito/Backend/API/API.csproj",
   "expectedPackageFiles": [
@@ -33,15 +33,5 @@
     "/home/ivan/.nuget/packages/system.composition.runtime/9.0.0/system.composition.runtime.9.0.0.nupkg.sha512",
     "/home/ivan/.nuget/packages/system.composition.typedparts/9.0.0/system.composition.typedparts.9.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problem reading the cache file /home/ivan/Projects/Stockcito/Backend/API/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "/home/ivan/Projects/Stockcito/Backend/API/API.csproj",
-      "warningLevel": 1,
-      "filePath": "/home/ivan/Projects/Stockcito/Backend/API/API.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

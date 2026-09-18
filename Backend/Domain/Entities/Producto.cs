@@ -41,6 +41,21 @@ public class Product : AggregateRoot
         return producto;
     }
 
+    public static Product Reconstituir(ProductId id, ProductName nombre, SKU sku, Quantity stock, Money precio, StockStatus estado, DateTime creadoEn, DateTime actualizadoEn)
+    {
+        return new Product
+        {
+            Id = id,
+            Nombre = nombre,
+            Sku = sku,
+            Stock = stock,
+            Precio = precio,
+            Estado = estado,
+            CreadoEn = creadoEn,
+            ActualizadoEn = actualizadoEn
+        };
+    }
+
     public void AgregarStock(int unidades)
     {
         var unidadesAgregadas = new Quantity(unidades);

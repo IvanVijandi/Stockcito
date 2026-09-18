@@ -8,14 +8,10 @@
     ".NETCoreApp,Version=v10.0": {
       "API/1.0.0": {
         "dependencies": {
-<<<<<<< HEAD
           "Application": "1.0.0",
-          "Microsoft.AspNetCore.OpenApi": "10.0.12"
-=======
           "Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.12",
           "Microsoft.EntityFrameworkCore.Design": "10.0.12"
->>>>>>> origin/BaseDeDatos
         },
         "runtime": {
           "API.dll": {}
@@ -385,22 +381,6 @@
           }
         }
       },
-<<<<<<< HEAD
-      "Application/1.0.0": {
-        "dependencies": {
-          "Domain": "1.0.0"
-        },
-        "runtime": {
-          "Application.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Domain/1.0.0": {
-        "runtime": {
-          "Domain.dll": {
-=======
       "Microsoft.VisualStudio.SolutionPersistence/1.0.52": {
         "runtime": {
           "lib/net8.0/Microsoft.VisualStudio.SolutionPersistence.dll": {
@@ -517,14 +497,34 @@
           }
         }
       },
+      "Application/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Infrastructure/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
+          "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.12",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.3"
         },
         "runtime": {
           "Infrastructure.dll": {
->>>>>>> origin/BaseDeDatos
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -636,14 +636,6 @@
       "path": "microsoft.openapi/2.12.0",
       "hashPath": "microsoft.openapi.2.12.0.nupkg.sha512"
     },
-<<<<<<< HEAD
-    "Application/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Domain/1.0.0": {
-=======
     "Microsoft.VisualStudio.SolutionPersistence/1.0.52": {
       "type": "package",
       "serviceable": true,
@@ -728,8 +720,17 @@
       "path": "system.composition.typedparts/9.0.0",
       "hashPath": "system.composition.typedparts.9.0.0.nupkg.sha512"
     },
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Infrastructure/1.0.0": {
->>>>>>> origin/BaseDeDatos
       "type": "project",
       "serviceable": false,
       "sha512": ""

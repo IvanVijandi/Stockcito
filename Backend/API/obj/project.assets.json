@@ -696,6 +696,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "Application": "1.0.0",
+          "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.12",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.3"
         },
@@ -2757,13 +2759,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /home/ivan/Projects/Stockcito/Backend/API/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
-    }
-  ]
+  }
 }

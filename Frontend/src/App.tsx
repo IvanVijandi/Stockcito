@@ -4,6 +4,9 @@ import { Dashboard } from './pages/Dashboard';
 import { Inventario } from './pages/Inventario';
 import { Ordenes } from './pages/Ordenes';
 
+import { ProductosPage } from './pages/ProductosPage';
+import { StockPage } from './pages/StockPage';
+
 export function App() {
   return (
     <BrowserRouter>
@@ -12,6 +15,8 @@ export function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/inventario" element={<Inventario />} />
           <Route path="/ordenes" element={<Ordenes />} />
+          <Route path="/productos/nuevo" element={<ProductosPage />} />
+          <Route path="/stock/gestionar" element={<StockPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

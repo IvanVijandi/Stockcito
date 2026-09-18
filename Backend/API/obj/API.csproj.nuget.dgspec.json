@@ -1197,7 +1197,14 @@
           "net10.0": {
             "framework": "net10.0",
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/ivan/Projects/Stockcito/Backend/Application/Application.csproj": {
+                "projectPath": "/home/ivan/Projects/Stockcito/Backend/Application/Application.csproj"
+              },
+              "/home/ivan/Projects/Stockcito/Backend/Domain/Domain.csproj": {
+                "projectPath": "/home/ivan/Projects/Stockcito/Backend/Domain/Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

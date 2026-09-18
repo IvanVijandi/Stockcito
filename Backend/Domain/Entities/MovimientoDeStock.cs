@@ -42,4 +42,16 @@ public sealed class StockMovement : AggregateRoot
             OccurredAt = DateTime.UtcNow
         };
     }
+    public static StockMovement Reconstituir(StockMovementId id, ProductId productId, MovementType type, Quantity units, string? reason, DateTime occurredAt)
+    {
+        return new StockMovement
+        {
+            Id = id,
+            ProductId = productId,
+            Type = type,
+            Units = units,
+            Reason = reason,
+            OccurredAt = occurredAt
+        };
+    }
 }

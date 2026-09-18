@@ -264,6 +264,29 @@
             "related": ".xml"
           }
         }
+      },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
       }
     }
   },
@@ -688,10 +711,22 @@
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
       ]
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Application >= 1.0.0",
+      "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 10.0.12",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.3"
     ]
@@ -721,7 +756,14 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/ivan/Projects/Stockcito/Backend/Application/Application.csproj": {
+              "projectPath": "/home/ivan/Projects/Stockcito/Backend/Application/Application.csproj"
+            },
+            "/home/ivan/Projects/Stockcito/Backend/Domain/Domain.csproj": {
+              "projectPath": "/home/ivan/Projects/Stockcito/Backend/Domain/Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
